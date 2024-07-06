@@ -1,0 +1,9 @@
+Model : Listing  -->palces(apartment , house , flat)
+
+- title : string
+-description : string
+- image : url / link   string
+- price :
+-location : string
+- country :
+   
