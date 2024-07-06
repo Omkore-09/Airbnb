@@ -7,3 +7,17 @@ Model : Listing  -->palces(apartment , house , flat)
 -location : string
 - country :
    
+
+   index route 
+   GET / listings  -> all listings
+       /listing: index
+
+
+    Read : show route 
+   GET /listings/:id
+
+   for geting price in the indian standard we covert it into the localstring 
+
+
+   Create :New & Create route
+   GET    /listing/new   -> form ->submit ->    POST  /listings
