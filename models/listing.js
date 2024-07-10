@@ -9,13 +9,18 @@ const listingSchema = new Schema({
   description: String,
   image: {
     filename: String,
-    url: String
+    url: {
+      type: String,
+      default :'https://unsplash.com/photos/a-split-photo-of-a-living-room-and-kitchen-Itg6WGOAJaY',
+    }
   },
     
   price: Number,
   location: String,
   country: String,
 });
+
+
 
 const Listing = mongoose.model("Listing", listingSchema);
 module.exports = Listing;
