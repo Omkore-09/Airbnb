@@ -1,3 +1,9 @@
+if(process.env.NODE_ENV != "production"){
+  require('dotenv').config();
+}
+
+
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -47,9 +53,9 @@ const sessionOptions = {
   }
 };
 
-app.get("/", (req, res) => {
-  res.send("Hello omkar");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello omkar");
+// });
 
 app.use(session(sessionOptions))
 app.use(flash());
@@ -64,7 +70,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use((req , res , next)=>{
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
-  
+  res.locals.currUser = req.user;
   next();
 })
 
