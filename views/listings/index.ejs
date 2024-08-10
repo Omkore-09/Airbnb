@@ -1,16 +1,16 @@
 <% layout("/layouts/boilerplate") %>
 <style>
-  /* Filter Section Styling */
+  
   #filters {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap; /* Prevent wrapping to ensure horizontal scrolling */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    scrollbar-width: thin; /* For Firefox */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    scrollbar-width: thin; 
+    -webkit-overflow-scrolling: touch; 
   }
 
-  /* Custom scrollbar styling for webkit browsers */
+  
   #filters::-webkit-scrollbar {
     height: 8px; /* Adjust the height of the scrollbar */
   }
@@ -73,21 +73,21 @@
     display: flex;
     align-items: center;
     margin-left: 2rem;
-    font-size: 1rem; /* Ensure consistent font size */
-    white-space: nowrap; /* Prevent the text from wrapping */
+    font-size: 1rem; 
+    white-space: nowrap;
   }
 
-  /* Responsive Design */
+ 
   @media (max-width: 768px) {
     .tax-toggle {
-      margin-left: 0; /* Remove left margin on smaller screens */
-      margin-top: 2rem; /* Add margin to top for spacing */
-      width: 100%; /* Take full width on smaller screens */
+      margin-left: 0;
+      margin-top: 2rem; 
+      width: 100%;
     }
 
     #filters {
-      flex-wrap: nowrap; /* Prevent wrapping to ensure horizontal scrolling */
-      overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+      flex-wrap: nowrap; 
+      overflow-x: auto; 
     }
   }
 </style>
