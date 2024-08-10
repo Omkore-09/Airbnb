@@ -23,6 +23,8 @@
  
 </style>
 
+
+
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
@@ -36,11 +38,11 @@
         </div>
 
         <div class="navbar-nav ms-auto">
-          <form class="d-flex">
-            <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations" >
+          <form class="d-flex" action="/listings/search" method="get">
+            <input class="form-control me-2 search-inp" type="search" name="q" placeholder="Search destinations" required>
             <button class="btn button-search" type="submit">
               <i class="fa-solid fa-magnifying-glass"></i>Search
-              </button>
+            </button>
           </form>
         </div>
       
