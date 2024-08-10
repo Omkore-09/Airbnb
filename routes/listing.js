@@ -10,6 +10,28 @@ const {storage} = require("../cloudConfig.js")
 const upload = multer({storage})
 
 
+//searching
+
+router
+.get('/search', async (req, res) => {
+  const searchTerm = req.query.q;
+  
+  console.log('Search term:', searchTerm); // Debugging: log the search term
+  
+  try {
+    const results = await Listing.find({
+      $text: { $search: searchTerm }
+    });
+    res.render('search', { results }); // Render the search results page
+  } catch (error) {
+    console.error('Error during search:', error);
+    res.status(500).send('An error occurred during the search.');
+  }
+});
+
+
+
+
 router.get('/', listingController.index);
 
 router
